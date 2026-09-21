@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Global behavioral guidelines for AI coding agents. Merge with project-specific instructions; more specific project instructions take precedence when they conflict.
+Global behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions; more specific project instructions take precedence when they conflict.
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
@@ -83,10 +83,11 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ## Conventions
 
 - No hardcoded secrets. Env vars or secure storage only.
-- Communication: extremely concise, no filler, NEVER use em dash characters.
-- Plain language: explain answers in everyday terms. Avoid technical jargon when possible, and briefly explain any technical terms you need to use.
+- Communication: extremely concise, no filler, NEVER use em dash characters. Use plain languages, explain answers in everyday terms. Avoid technical jargon when possible, and briefly explain any technical terms you need to use. 
+
 - Errors: state what it means, likely causes ranked by probability, concrete fixes.
 - Commits: `prefix(scope): concise message`. Prefixes: `feat`, `fix`, `refactor`, `chore`. No AI attribution in commits, PRs, or code.
 - Tools: prefer `rg` for search; use `fd` and `tree` if installed, otherwise use available alternatives.
 - Visualization: ASCII in discussion (architecture, data flow, state machines, directory structure), in a fenced code block. Mermaid only in documentation and artifacts.
 - When `rtk` is installed, prefix shell commands with `rtk`; otherwise use the commands directly.
+
