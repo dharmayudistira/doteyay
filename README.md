@@ -1,4 +1,4 @@
-# dotclaude
+# doteyay
 
 Portable, agent-neutral coding instructions. `AGENTS.md` is the single source of truth for shared behavioral rules. The repo name is historical; the rules are not Claude-specific.
 
