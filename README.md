@@ -14,6 +14,17 @@ Keep this clone at a stable path if you approve symlinks to `AGENTS.md`. Agent-s
 
 ## Instruction layers
 
+```
+doteyay/
+├── AGENTS.md        ← global rules (source of truth)
+└── CLAUDE.md        ← Claude Code adapter to AGENTS.md
+
+your-project/
+├── AGENTS.md        ← project-level rules (any agent)
+├── CLAUDE.md        ← symlink to AGENTS.md
+└── .claude/         ← per-project Claude Code setup
+```
+
 `AGENTS.md` in this repo contains personal defaults that apply across projects. A separate project's `AGENTS.md` should contain only that project's architecture, commands, and conventions. For Claude Code in a project, a `CLAUDE.md` symlink to that project's `AGENTS.md` lets both agents read the same project rules.
 
 This repo's `CLAUDE.md` is only a Claude Code adapter that points back to the shared file. An agent may see the shared rules twice when editing this repo, once globally and once from the repo. Other projects receive only the global copy plus their own project rules.
